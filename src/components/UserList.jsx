@@ -6,7 +6,7 @@ const UserList = ({users}) => {
     return (
         <div>
             {users.map(user => {
-                return <User key={user.id} clickHandler name={user.name} state={user.state} />
+                return <User key={user.id}  name={user.name} state={user.state} />
             })}
         </div>
     )
