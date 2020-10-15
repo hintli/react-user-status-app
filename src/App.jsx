@@ -1,20 +1,28 @@
 import React from 'react'
-import User from './components/User'
+import UserList from './components/UserList'
 import './App.css'
 
-function onClickHandler() {
-  console.log("onClickHandler");
-}
+//deneme
 
- function App() {
 
-  return (
-    <div className="App">
-      <User name="ali" state="offline" clickHandler={onClickHandler}/>
-      <User name="mustafa" state="online" clickHandler={onClickHandler}/>
-      <User name="mehmet" state="busy" clickHandler={onClickHandler}/>
-    </div>
-  )
+ class App extends React.Component {
+
+  state = {
+    users: [
+      {id:1, name:"ali" , state:"offline"},
+      {id:2, name:"mustafa" , state:"online"},
+      {id:3, name:"mehmet" , state:"busy"},
+    ]
+  }
+
+  render() {
+    return (
+      <div>
+        <UserList users={this.state.users} />
+      </div>
+    )
+  }
+  
 }
 
 
