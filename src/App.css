@@ -12,6 +12,7 @@
     padding:20px;
     margin:30px;
     opacity: 0.9;
+    overflow: hidden;
 }
 
 select {
