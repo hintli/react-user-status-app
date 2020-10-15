@@ -1,0 +1,31 @@
+.card {
+    text-align: center;
+    border:1px solid grey;
+    background-color: grey;
+    border-radius: 15px;
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    margin:30px;
+    opacity: 0.9;
+}
+
+select {
+    margin:10px;
+}
+
+.offline {
+    color: red;
+}
+
+.online {
+    color: green;
+}
+
+.busy {
+    color: yellow;
+}
