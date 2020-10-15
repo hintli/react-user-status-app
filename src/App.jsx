@@ -35,6 +35,19 @@ import AddUser from './components/AddUser'
 
   }
 
+  stateChangeHandler = (data) => {
+    const tUsers = this.state.users.map(user => {
+      if(user.id === data.id) {
+         user.state = data.state;
+      }
+      return user
+    })
+
+    this.setState({
+      users:tUsers
+    })
+  }
+
   deleteMethod = (id) => {
     console.log(id)
     console.log(this.state.users)
@@ -53,7 +66,7 @@ import AddUser from './components/AddUser'
   render() {
     return (
       <div>
-        <UserList users={this.state.users} deleteMethod={this.deleteMethod}/>
+        <UserList users={this.state.users} deleteMethod={this.deleteMethod} stateChange={this.stateChangeHandler}/>
         <hr/>
         <AddUser addMethod={this.addMethod}/>
       </div>
