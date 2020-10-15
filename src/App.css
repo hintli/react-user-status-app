@@ -13,6 +13,14 @@
     margin:30px;
     opacity: 0.9;
     overflow: hidden;
+    position: relative;
+    
+}
+
+.card:hover {
+    opacity: 1;
+    color:white;
+    background-color: black;
 }
 
 select {
@@ -29,4 +37,50 @@ select {
 
 .busy {
     color: yellow;
+}
+
+.addUserForm {
+    height: auto;
+    width: 40%;
+    margin:30px;
+    border:1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.addUserForm  button {
+    opacity: 1;
+    background-color:grey;
+    color:black;
+    margin-left: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.addUserForm  input {
+    opacity: 0.7;
+    background-color:grey;
+    color:black;
+    border:1px solid black;
+    border-radius: 5px;
+}
+
+.deleteButton {
+    position: absolute;
+    right: 5px;
+    top:5px;
+    width: 75px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+.deleteButton:hover {
+    background-color: red;
+    color:white;
+    width: 75px;
+    height: 25px;
+    border-radius: 10px;
 }

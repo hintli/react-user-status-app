@@ -35,10 +35,25 @@ import AddUser from './components/AddUser'
 
   }
 
+  deleteMethod = (id) => {
+    console.log(id)
+    console.log(this.state.users)
+    let tUsers = this.state.users.filter(user => {
+          return user.id !== id
+    })
+
+    this.setState({
+      users: tUsers
+    })
+    console.log(this.state.users)
+  }
+
+ 
+
   render() {
     return (
       <div>
-        <UserList users={this.state.users} />
+        <UserList users={this.state.users} deleteMethod={this.deleteMethod}/>
         <hr/>
         <AddUser addMethod={this.addMethod}/>
       </div>
